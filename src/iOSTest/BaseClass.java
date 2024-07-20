@@ -64,7 +64,7 @@ public class BaseClass {
 		// Perform the scroll
 		driver.perform(Arrays.asList(scroll));
 	}
-	
+
 	public void scrollToElement(String elementText) {
 		Map<String, Object> params = new HashMap<>();
 		params.put("direction", "down");
@@ -82,14 +82,21 @@ public class BaseClass {
 	public void back() {
 		driver.findElement(AppiumBy.iOSNsPredicateString("label == 'UIKitCatalog' AND type == 'XCUIElementTypeButton'")).click(); 
 	}
-	
+
 	public void longPressONElementByXPATH(String elementXpath, int duration) {
 		WebElement element=driver.findElement(AppiumBy.xpath(elementXpath));
 		Map<String, Object> param=new HashMap<>();
 		param.put("element", ((RemoteWebElement)element).getId());
 		param.put("duration", duration);
 		driver.executeScript("mobile:touchAndHold", param);
-		
+
+	}
+
+	//Perform escape action
+	public void performEditorAction() {
+		Map<String, Object> params = new HashMap<>();
+		params.put("action", "escape");  // Adjust the action as needed
+		((JavascriptExecutor) driver).executeScript("mobile: performEditorAction", params);
 	}
 
 	@AfterClass

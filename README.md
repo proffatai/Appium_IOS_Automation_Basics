@@ -77,3 +77,6 @@ driver.findElement(AppiumBy.iOSNsPredicateString("name [c] ENDSWITH 'Controls'")
 	
 	
 type BEGINSWITH 'XCUIElement' AND label=='UIKitCatalog'
+
+
+

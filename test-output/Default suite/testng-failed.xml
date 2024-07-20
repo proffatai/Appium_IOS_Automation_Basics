@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="iOSTest.IOS_basics">
+      <class name="iOSTest.iOS_Slider_pickerView">
         <methods>
+          <include name="iOSSlider"/>
           <include name="setup"/>
-          <include name="Setup"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- iOSTest.IOS_basics -->
+      </class> <!-- iOSTest.iOS_Slider_pickerView -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
